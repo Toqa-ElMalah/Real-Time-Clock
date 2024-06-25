@@ -1,11 +1,3 @@
-/*
- * Seven_Segment_Driver.c
- *
- * Created: 10/27/2023 10:05:52 AM
- *  Author: DELL
- */ 
-
-
 #include "DIO.h"
 
 void sevensegment_init (unsigned char port){
