@@ -1,11 +1,3 @@
-/*
- * DIO.c
- *
- * Created: 10/14/2023 3:21:55 PM
- *  Author: DELL
- */ 
-
-
 #include <avr/io.h>
 #include "std_macrous.h"
 
