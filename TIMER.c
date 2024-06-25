@@ -1,10 +1,3 @@
-/*
- * TIMER.c
- *
- * Created: 10/26/2023 12:00:49 AM
- *  Author: DELL
- */ 
-
 #include <avr/interrupt.h>
 #include <avr/io.h>
 #include "std_macrous.h"
