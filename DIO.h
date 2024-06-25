@@ -1,13 +1,6 @@
-/*
- * DIO.h
- *
- * Created: 10/14/2023 3:10:11 PM
- *  Author: DELL
- */ 
-
-
 #ifndef DIO_H_
 #define DIO_H_
+
 void DIO_vsetPINDir (unsigned char port,unsigned char pinnumber,unsigned char direction);
 void DIO_write (unsigned char portname,unsigned char pinnumber,unsigned char outputvalue);
 unsigned char DIO_u8read (unsigned char portname,unsigned char pinnumber);
