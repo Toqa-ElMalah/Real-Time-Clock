@@ -1,11 +1,3 @@
-/*
- * Keypad_Driver.c
- *
- * Created: 10/17/2023 10:41:53 PM
- *  Author: DELL
- */ 
-
-
 #include "Keypad_Driver.h"
 
 void keypad_vInit (void){
