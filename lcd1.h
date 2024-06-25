@@ -1,19 +1,21 @@
-/*
- * lcd1.c
- *
- * Created: 10/13/2023 3:29:49 PM
- *  Author: DELL
- */ 
-
 
 #ifndef LCD_H_
 #define LCD_H_
+
 #include "DIO.h"
-#include "lcd1_config.h"
+#include "LCD-CONFIG.h"
+
 #define CLR_SCREEN 0x01
-#define CURSOR_ON_DISPLAY_ON 0x0c
+#define CURSOR_ON_DISPLAN_ON 0x0e
 #define RETURN_HOME 0x02
 #define ENTRY_MODE 0x06
+
+#define EN_port 'B'
+#define EN_pin 0
+#define RS_port 'B'
+#define RS_pin 2
+#define RW_port 'B'
+#define RW_pin 1
 
 #if defined four_bits_mode
 #define FOUR_BITS 0x28
@@ -21,20 +23,11 @@
 #define EIGHT_BITS 0x38
 #endif
 
-#define port_EN 'A'
-#define EN 0
-#define port_RW 'A'
-#define RW 1
-#define port_RS 'A'
-#define RS 2
-
-void LCD_vInit(char port);
+void LCD_int (char Data_port);
+void LCD_send_char (char Data_port, char data);
 static void enable (void);
-void LCD_vSend_cmd(char port,char cmd);
-void LCD_vSend_char(char port,char data);
-void LCD_vSend_string(char port,char *data);
-void LCD_clearscreen(char port);
-void LCD_movecursor(char port,char row,char coloumn);
+void LCD_send_command (char Data_port, char command);
+void LCD_send_string (char Data_port, char *ptr);
+void LCD_move_coursor (char Data_port, char row, char column);
 
-#endif
-
+#endif 
